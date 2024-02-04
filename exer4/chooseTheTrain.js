@@ -40,7 +40,7 @@ function getKeysToArr(arrivals) {
 }
 
 /**
- * Task 2: We want to know which train is coming in 1 mintue!
+ * Task 2: We want to know which train is coming in 1 minute!
  *
  * Create a function that takes railArray as an argument
  * and return an array of arrivals that is coming in 1 minute
