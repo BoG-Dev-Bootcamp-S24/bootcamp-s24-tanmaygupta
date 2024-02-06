@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: dimgrey;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: white;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#logo {
+    height: 90%;
+    justify-content: flex-start;
+}
+
+#navbar-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    width: 40%;
+    height: 90%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: white;
+    /* border: 1px solid red; */
+}
+
+.nav-button {
+    display: flex;
+    color: white;
+    background-color: red;
+    width: 25%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+}
+
+.nav-button:hover {
+    background-color: rgb(211, 3, 3);
+}
+
+a {
+    text-decoration: none; /* Remove underlining */
+    color: inherit; /* Inherit the color from the parent */
+    cursor: pointer;
+}
+
+.heading {
+    height: 7vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(71, 70, 70);
+    border-radius: 10px;
+    color: white
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: white;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
