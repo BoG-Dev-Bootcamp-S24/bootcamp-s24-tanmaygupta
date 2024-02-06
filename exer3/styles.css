@@ -3,3 +3,51 @@
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+    background-color: dimgrey;
+}
+
+nav {
+    background-color: white;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#logo {
+    height: 90%;
+    justify-content: flex-start;
+}
+
+#navbar-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    width: 40%;
+    height: 90%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: white;
+    /* border: 1px solid red; */
+}
+
+.nav-button {
+    display: flex;
+    background-color: red;
+    width: 25%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button:hover {
+    background-color: rgb(215, 4, 4);
+}
+
+a {
+    color: white;
+}
