@@ -40,35 +40,70 @@ nav {
 
 .nav-button {
     display: flex;
+    color: white;
     background-color: red;
     width: 25%;
     height: 70%;
     justify-content: center;
     align-items: center;
+    font-size: 1.2vw;
 }
 
 .nav-button:hover {
-    background-color: rgb(215, 4, 4);
+    background-color: rgb(211, 3, 3);
 }
 
 a {
-    color: white;
+    text-decoration: none; /* Remove underlining */
+    color: inherit; /* Inherit the color from the parent */
+    cursor: pointer;
 }
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex: 1;
+    width: 100vw;
+    color: white;
+    font-size: 4vw;
 }
 
 footer {
-    background-color: white;
     background-color: white;
     height: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 2vw;
-    padding-right: 2vw;
+}
+
+.search-area {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    flex-direction: row;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.search-box {
+    width: 50%;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    padding: 0.5vw;
+    margin-right: 2vw;
+}
+
+.search-button {
+    display: flex;
+    color: black;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    border-radius: 10px;
+    padding: 0.5vw;
 }
