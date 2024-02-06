@@ -6,6 +6,9 @@
 
 body {
     background-color: dimgrey;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 nav {
@@ -50,4 +53,22 @@ nav {
 
 a {
     color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+footer {
+    background-color: white;
+    background-color: white;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
