@@ -16,17 +16,6 @@ document.getElementById('nameForm').addEventListener('submit', (event) => {
     
     // Error handling should also be implemented.
 
-    // const nameAnalysis = async () => {
-    //     let age = await fetch(agifyUrl);
-    //     let gender = await fetch(genderizeUrl);
-    //     let nationality = await fetch(nationalizeUrl);
-
-    //     if (!age.ok || !gender.ok || !nationality.ok) {
-    //         console.error("There was a problem calling the apis!!!");
-    //     }
-    //     return [age.json(), gender.json(), nationality.json()];
-    // };
-
     const ageAnalysis = async () => {
         let age = await fetch(agifyUrl);
 
