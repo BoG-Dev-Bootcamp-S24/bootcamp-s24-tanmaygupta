@@ -11,3 +11,7 @@
     align-items: center;
     width: 50%;
 }
+
+.button.active {
+    background-color: #7CFF79;
+}

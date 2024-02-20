@@ -54,8 +54,8 @@ const PokeDexRight = (({pokemonStats, pokemonMoves, pokemonHeight, pokemonWeight
         <div className="pokedex-right">
             { choice === 0 ? displayInfo() : displayMoves() }
             <div className="buttons">
-                <button onClick={chooseInfo}> Info </button>
-                <button onClick={chooseMoves}> Moves </button>
+                <button onClick={chooseInfo} className={`button ${choice === 0 ? 'active' : ''}`}> Info </button>
+                <button onClick={chooseMoves} className={`button ${choice === 1 ? 'active' : ''}`}> Moves </button>
             </div>
         </div>
     )
