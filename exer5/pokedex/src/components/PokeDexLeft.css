@@ -10,7 +10,7 @@
     width: 40%;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    padding-top: 3vh;
 }
 
 .name {
@@ -20,10 +20,16 @@
     width: 60%;
     height: 6%;
     background-color: gainsboro;
-    margin: 1vh;
+    margin: 2vh;
     border-radius: 10px;
     font-size: 1.25rem;
     border: 1px solid black
+}
+
+img {
+    width: 60%;
+    height: auto;
+    border: 3px solid black;
 }
 
 .buttons {
@@ -42,6 +48,7 @@
     font-size: 2rem;
     text-align: center;
     padding-top: 0;
+    border: none;
 }
 
 .types {
