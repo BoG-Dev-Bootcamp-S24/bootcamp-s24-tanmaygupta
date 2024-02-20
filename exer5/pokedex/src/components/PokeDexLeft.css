@@ -13,11 +13,25 @@
     justify-content: center;
 }
 
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 6%;
+    background-color: gainsboro;
+    margin: 1vh;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    border: 1px solid black
+}
+
 .buttons {
     width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 1vh;
 }
 
 .button {
@@ -35,6 +49,7 @@
     justify-content: center;
     flex-flow: row wrap;
     width: 80%;
+    margin-bottom: 1vh;
 }
 
 .type {

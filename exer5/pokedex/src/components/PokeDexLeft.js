@@ -13,7 +13,9 @@ const PokeDexLeft = (({pokemonName, pokemonSprite, pokemonTypes, modifyIndex}) =
         <div className="pokedex-left">
             <h2>Left Side</h2>
             <img src={sprite} alt={`${name} image`}></img>
-            <h3> {name} </h3>
+            <div className="name">
+                <p> {name} </p>
+            </div>
             <p style={{fontWeight: 'bold'}}> Types: </p>
             <div className="types">
                 {types.map((type) => {
