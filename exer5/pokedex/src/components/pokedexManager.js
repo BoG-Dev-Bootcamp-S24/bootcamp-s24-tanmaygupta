@@ -1,3 +1,4 @@
+import PokeDexLeft from "../PokeDexLeft";
 import "./PokedexManager.css";
 import { useState, useEffect } from "react";
 
@@ -29,10 +30,11 @@ const PokedexManager = (() => {
 
     return (
         <div className="pokedex-manager">
-            <h1> This the Pokedex Manager </h1>
+            {/* <h2> This the Pokedex Manager </h2> */}
             <br />
             {error && <p> Error occurred: {error} </p>}
-            {data && <p> Pokemon: {data.name} </p>}
+            {data && <PokeDexLeft pokemonName = {data.name} pokemonSprite = {data.sprites.front_default} 
+                pokemonTypes = {data.types}/>}
         </div>
     )
 })
