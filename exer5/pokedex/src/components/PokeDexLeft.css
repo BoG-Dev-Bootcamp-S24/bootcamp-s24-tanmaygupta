@@ -29,3 +29,19 @@
     text-align: center;
     padding-top: 0;
 }
+
+.types {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 80%;
+}
+
+.type {
+    width: 5vw;
+    height: 3vh;
+    background-color: gainsboro;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 0;
+}

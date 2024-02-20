@@ -14,6 +14,14 @@ const PokeDexLeft = (({pokemonName, pokemonSprite, pokemonTypes, modifyIndex}) =
             <h2>Left Side</h2>
             <img src={sprite} alt={`${name} image`}></img>
             <h3> {name} </h3>
+            <p style={{fontWeight: 'bold'}}> Types: </p>
+            <div className="types">
+                {types.map((type) => {
+                    return (
+                        <p className="type">{type.type.name}</p>
+                    )
+                })}
+            </div>
             <div className="buttons">
                 <button className="button" onClick={decrement}> &#60; </button>
                 <button className="button" onClick={increment}> &#62; </button>
