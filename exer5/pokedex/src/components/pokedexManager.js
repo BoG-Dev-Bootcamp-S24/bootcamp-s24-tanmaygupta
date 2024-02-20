@@ -47,7 +47,7 @@ const PokedexManager = (() => {
             {error && <p> Error occurred: {error} </p>}
             {data && <PokeDexLeft pokemonName = {data.name} pokemonSprite = {data.sprites.front_default} 
                 pokemonTypes = {data.types} modifyIndex={modifyIndex}/>}
-            {data && <PokeDexRight />}
+            {data && <PokeDexRight pokemonStats = {data.stats} pokemonMoves = {data.moves} pokemonHeight = {data.height} pokemonWeight = {data.weight}/>}
         </div>
     )
 })
