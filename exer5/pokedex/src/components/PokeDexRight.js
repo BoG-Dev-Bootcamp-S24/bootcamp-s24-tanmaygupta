@@ -39,6 +39,13 @@ const PokeDexRight = (({pokemonStats, pokemonMoves, pokemonHeight, pokemonWeight
         return (
             <div className="moves">
                 <h3> Moves </h3>
+                <div className="moves">
+                    {moves.map((move) => {
+                        return (
+                            <p> {move.move.name} </p>
+                        )
+                    })}
+                </div>
             </div>
         )
     })
