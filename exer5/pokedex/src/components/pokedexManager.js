@@ -1,3 +1,4 @@
+import "./PokedexManager.css"
 import { useState, useEffect } from "react";
 
 const PokedexManager = (() => {

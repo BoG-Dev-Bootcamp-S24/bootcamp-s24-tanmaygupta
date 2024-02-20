@@ -1,5 +1,5 @@
 import './App.css';
-import PokedexManager from './components/pokedexManager';
+import PokedexManager from "./components/PokedexManager.js";
 
 function App() {
   return (
