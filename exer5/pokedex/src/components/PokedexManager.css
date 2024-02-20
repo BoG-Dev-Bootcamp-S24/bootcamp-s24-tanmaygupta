@@ -7,9 +7,11 @@
 .pokedex-manager {
     width: 80%;
     height: 80%;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgb(100, 87, 87);
+    align-items: center; */
+    padding-top: 10%;
+    text-align: center;
+    background-color: rgb(234, 221, 127);
     border-radius: 55px;
 }
