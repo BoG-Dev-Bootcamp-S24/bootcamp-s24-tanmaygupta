@@ -1,4 +1,4 @@
-
+import "./PokeDexRight.css"
 
 const PokeDexRight = (() => {
     return (
