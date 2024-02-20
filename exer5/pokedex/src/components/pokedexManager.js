@@ -10,6 +10,16 @@ const PokedexManager = (() => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
 
+    function modifyIndex(change) {
+        if (index === 1 && change === -1) {
+            setIndex(1);
+        } else if (index === 1025 && change === 1) {
+            setIndex(1025);
+        } else {
+            setIndex(index + change);
+        }
+    }
+
     async function getData() {
         try {
             const response = await fetch(API_URL + index);
@@ -24,6 +34,7 @@ const PokedexManager = (() => {
             setError(error);
         }
     }
+
     useEffect (() => {
         getData()
     }, [index])
@@ -34,7 +45,7 @@ const PokedexManager = (() => {
             <br />
             {error && <p> Error occurred: {error} </p>}
             {data && <PokeDexLeft pokemonName = {data.name} pokemonSprite = {data.sprites.front_default} 
-                pokemonTypes = {data.types}/>}
+                pokemonTypes = {data.types} modifyIndex={modifyIndex}/>}
         </div>
     )
 })

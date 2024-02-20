@@ -1,10 +1,13 @@
 import "./PokeDexLeft.css"
 
-const PokeDexLeft = (({pokemonName, pokemonSprite, pokemonTypes}) => {
+const PokeDexLeft = (({pokemonName, pokemonSprite, pokemonTypes, modifyIndex}) => {
     const name = pokemonName;
     const sprite = pokemonSprite;
     const types = pokemonTypes;
 
+    const increment = (() => modifyIndex(1))
+
+    const decrement = (() => modifyIndex(-1))
 
     return (
         <div className="pokedex-left">
@@ -12,8 +15,8 @@ const PokeDexLeft = (({pokemonName, pokemonSprite, pokemonTypes}) => {
             <img src={sprite} alt={`${name} image`}></img>
             <h3> {name} </h3>
             <div className="buttons">
-                <button className="button"> &#60; </button>
-                <button className="button"> &#62; </button>
+                <button className="button" onClick={decrement}> &#60; </button>
+                <button className="button" onClick={increment}> &#62; </button>
             </div>
         </div>
     )
