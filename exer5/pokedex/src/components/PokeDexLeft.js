@@ -16,11 +16,11 @@ const PokeDexLeft = (({pokemonName, pokemonSprite, pokemonTypes, modifyIndex}) =
             <div className="name">
                 <p> {name} </p>
             </div>
-            <p style={{margin: '1vh', fontWeight: 'bold'}}> Types: </p>
+            <p style={{margin: '1vh', marginLeft: '20%', alignSelf: 'start', fontWeight: 'bold'}}> Types: </p>
             <div className="types">
                 {types.map((type) => {
                     return (
-                        <p className="type">{type.type.name}</p>
+                        <p className={`type ${type.type.name}`}>{type.type.name}</p>
                     )
                 })}
             </div>
