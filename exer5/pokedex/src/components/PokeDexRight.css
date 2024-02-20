@@ -12,6 +12,27 @@
     width: 50%;
 }
 
+.button {
+    width: 8vw;
+    height: 6vh;
+    background-color: gainsboro;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+}
+
 .button.active {
     background-color: #7CFF79;
+}
+
+.button.active:hover { 
+    cursor: pointer;
+    background-color: #72ec6f;
 }
