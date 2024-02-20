@@ -1,4 +1,4 @@
-import PokeDexLeft from "../PokeDexLeft";
+import PokeDexLeft from "./PokeDexLeft";
 import "./PokedexManager.css";
 import { useState, useEffect } from "react";
 
