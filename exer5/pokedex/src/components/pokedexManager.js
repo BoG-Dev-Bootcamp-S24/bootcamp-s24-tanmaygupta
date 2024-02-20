@@ -1,4 +1,5 @@
 import PokeDexLeft from "./PokeDexLeft";
+import PokeDexRight from "./PokeDexRight";
 import "./PokedexManager.css";
 import { useState, useEffect } from "react";
 
@@ -46,6 +47,7 @@ const PokedexManager = (() => {
             {error && <p> Error occurred: {error} </p>}
             {data && <PokeDexLeft pokemonName = {data.name} pokemonSprite = {data.sprites.front_default} 
                 pokemonTypes = {data.types} modifyIndex={modifyIndex}/>}
+            {data && <PokeDexRight />}
         </div>
     )
 })

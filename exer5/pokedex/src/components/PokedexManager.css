@@ -5,11 +5,11 @@
 }
 
 .pokedex-manager {
-    width: 80%;
+    width: 70%;
     height: 80%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
     padding-top: 2%;
     text-align: center;
     background-color: rgb(234, 221, 127);
