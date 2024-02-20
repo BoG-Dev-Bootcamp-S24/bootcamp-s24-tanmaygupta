@@ -12,6 +12,7 @@
     align-items: center;
     padding-top: 2%;
     text-align: center;
-    background-color: rgb(234, 221, 127);
+    /* background-color: rgb(234, 221, 127); */
+    background-color: white;
     border-radius: 55px;
 }

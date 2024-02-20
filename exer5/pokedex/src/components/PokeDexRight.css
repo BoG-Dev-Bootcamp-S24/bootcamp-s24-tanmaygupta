@@ -7,9 +7,30 @@
 .pokedex-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 50%;
+    height: 100%;
+    padding-top: 3vh;
+}
+
+.info, .moves {
+    width: 60%;
+    height: 76%;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: gainsboro;
+    margin-top: 3vh;
+    padding: 8%;
+    height: 85%;
+    width: 100%;
+    overflow: auto;
+    font-size: 1.2rem;
+    line-height: 125%;
 }
 
 .button {

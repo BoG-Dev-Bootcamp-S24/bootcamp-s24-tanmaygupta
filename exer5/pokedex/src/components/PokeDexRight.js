@@ -21,8 +21,8 @@ const PokeDexRight = (({pokemonStats, pokemonMoves, pokemonHeight, pokemonWeight
     const displayInfo = (() => {
         return (
             <div className="info">
-                <h3> Info </h3>
-                <div className="stats">
+                <h2> Info </h2>
+                <div className="display">
                     <p> height: {height / 10}m </p>
                     <p> weight: {weight / 10}kg</p>
                     {stats.map((stat) => {
@@ -38,8 +38,8 @@ const PokeDexRight = (({pokemonStats, pokemonMoves, pokemonHeight, pokemonWeight
     const displayMoves = (() => {
         return (
             <div className="moves">
-                <h3> Moves </h3>
-                <div className="moves">
+                <h2> Moves </h2>
+                <div className="display">
                     {moves.map((move) => {
                         return (
                             <p> {move.move.name} </p>
