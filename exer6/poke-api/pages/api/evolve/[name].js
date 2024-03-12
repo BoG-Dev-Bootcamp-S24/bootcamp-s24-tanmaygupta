@@ -1,39 +1,35 @@
-import { useState, useEffect } from "react";
+export default async function handler(req, res) {
 
-const API_URL = "https://pokeapi.co/api/v2/pokemon/";
+    const API_URL = "https://pokeapi.co/api/v2/pokemon-species/";
 
-const PokedexManager = (() => {
-
-    const [index, setIndex] = useState(1);
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
-
-    function modifyIndex(change) {
-        if (index === 1 && change === -1) {
-            setIndex(1);
-        } else if (index === 1025 && change === 1) {
-            setIndex(1025);
-        } else {
-            setIndex(index + change);
-        }
-    }
-
-    async function getData() {
+    if (req.method === "GET") {
         try {
-            const response = await fetch(API_URL + index);
+            let {pokemonName} = req.query; //get name from request params
+
+            let response = await fetch(API_URL + pokemonName); //fetch evolution chain
             if (!response.ok) {
                 throw Error("Could not properly fetch data");
             }
-            const newData = await response.json();
-            setData(newData);
-            setError(null);
+            const pokemonSpecies = await response.json();
+
+            response = await fetch(pokemonSpecies.evolution_chain.url);
+            if (!response.ok) {
+                throw Error("Could not properly fetch data");
+            }
+            const data = await response.json();
+
+            if (data) {
+                if (data.chain.species.name === pokemonName) {
+                    res.status(200).json({next_evolution: data.chain.evolves_to[0].species.name});
+                } else if (data.chain.evolves_to[0].species.name === pokemonName) {
+                    res.status(200).json({next_evolution: data.chain.evolves_to[0].evolves_to[0].species.name});
+                } else {
+                    res.status(200).json({next_evolution: pokemonName});
+                }
+            }
+
         } catch (error) {
-            console.log(`Error occured: ${error}`);
-            setError(error);
+            res.status(400).json({error: "Server error"});
         }
     }
-
-    useEffect (() => {
-        getData()
-    }, [index]);
-})
+}
