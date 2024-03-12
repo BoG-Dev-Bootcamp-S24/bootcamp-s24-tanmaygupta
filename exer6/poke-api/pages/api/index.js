@@ -11,7 +11,8 @@ export default async function handler(req, res) {
                 throw Error("Could not properly fetch data");
             }
             const data = await response.json();
-            if (data) {
+
+            if (data) { //check data loaded
                 res.status(200).json({
                     name: data.name,
                     sprite: data.sprites.front_default,
