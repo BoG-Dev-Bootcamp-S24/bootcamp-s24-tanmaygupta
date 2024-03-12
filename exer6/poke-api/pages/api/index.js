@@ -4,8 +4,9 @@ export default async function handler(req, res) {
 
     if (req.method === "GET") {
         try {
-            let {name} = req.query;
-            const response = await fetch(API_URL + name); //fetch data
+            const id = Math.floor(Math.random() * 1024) + 1; //generate random id
+
+            const response = await fetch(API_URL + id); //fetch data
             if (!response.ok) {
                 throw Error("Could not properly fetch data");
             }
