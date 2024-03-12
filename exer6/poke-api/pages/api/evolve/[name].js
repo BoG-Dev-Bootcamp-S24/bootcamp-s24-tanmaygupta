@@ -4,9 +4,9 @@ export default async function handler(req, res) {
 
     if (req.method === "GET") {
         try {
-            let {pokemonName} = req.query; //get name from request params
+            let {name} = req.query; //get name from request params
 
-            let response = await fetch(API_URL + pokemonName); //fetch evolution chain
+            let response = await fetch(API_URL + name); //fetch evolution chain
             if (!response.ok) {
                 throw Error("Could not properly fetch data");
             }
@@ -19,16 +19,17 @@ export default async function handler(req, res) {
             const data = await response.json();
 
             if (data) {
-                if (data.chain.species.name === pokemonName) {
+                if (data.chain.evolves_to[0] && data.chain.species.name === name) {
                     res.status(200).json({next_evolution: data.chain.evolves_to[0].species.name});
-                } else if (data.chain.evolves_to[0].species.name === pokemonName) {
+                } else if (data.chain.evolves_to[0] && data.chain.evolves_to[0].evolves_to[0] && data.chain.evolves_to[0].species.name === name) {
                     res.status(200).json({next_evolution: data.chain.evolves_to[0].evolves_to[0].species.name});
                 } else {
-                    res.status(200).json({next_evolution: pokemonName});
+                    res.status(200).json({next_evolution: name});
                 }
             }
 
         } catch (error) {
+            console.log(error);
             res.status(400).json({error: "Server error"});
         }
     }

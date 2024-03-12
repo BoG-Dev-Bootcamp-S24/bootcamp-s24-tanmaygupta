@@ -4,7 +4,7 @@ export default async function handler(req, res) {
 
     if (req.method === "POST") {
         try {
-            let {pokemon1, pokemon2} = req.query; //get names from request params
+            const {pokemon1, pokemon2} = req.body; //get names from request body
 
             const response1 = await fetch(API_URL + pokemon1); //fetch data for pokemon1
             if (!response1.ok) {
