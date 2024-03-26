@@ -24,12 +24,12 @@ export default function handler(req, res) {
     } else if (req.method === "POST") {
         const body = req.body;
         if (!body) {
-            res.status(400).json({error: "Insufficient Information"});
+            res.status(400).json({error: "Insufficient information"});
             return;
         }
-        const id = Math.floor(Math.random() * 10000) + 1;
+        const id = Math.floor(Math.random() * 100000) + 1;
         const newUser = {id, ...body};
-        
+
         users.push(newUser);
         res.status(200).json(newUser);
     }
