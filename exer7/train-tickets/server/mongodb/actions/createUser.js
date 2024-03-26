@@ -1,7 +1,7 @@
 import connectDB from "..";
 import User from "../models/User";
 
-export default async function createDog(data) {
+export default async function createUser(data) {
     try {
         await connectDB();
         const user = new User(data);

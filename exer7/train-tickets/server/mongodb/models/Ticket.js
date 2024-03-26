@@ -16,4 +16,4 @@ const ticketSchema = new mongoose.Schema({
     },
 });
 
-export default mongoose.model("Ticket", ticketSchema)
+export default mongoose.models?.Ticket || mongoose.model("Ticket", ticketSchema)
