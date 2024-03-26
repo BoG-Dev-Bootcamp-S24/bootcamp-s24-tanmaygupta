@@ -8,6 +8,14 @@ export default async function updateTicketByUser(data) {
         if (!ticketID || !userID) {
             throw new Error('Both ticketID and userID are required in the query');
         }
+        const ticket = await Ticket.findById(ticketID);
+        if (!ticket) {
+            return "Ticket Not Found";
+        }
+        const user = await User.findById(userID);
+        if (!user) {
+            return "User Not Found";
+        }
         await Ticket.findByIdAndUpdate(ticketID, { userID: userID });
     } catch (e) {
         console.log(e)

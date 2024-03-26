@@ -9,6 +9,6 @@ export default async function readTicketsByUser(data) {
         return JSON.stringify(tickets);
     } catch (e) {
         console.log(e)
-        throw new Error("Unable to read dog. Invalid data or database issue.")
+        throw new Error("Unable to read user. Invalid user id or database issue.")
     }
 }
