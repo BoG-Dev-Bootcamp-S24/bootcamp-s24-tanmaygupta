@@ -4,8 +4,8 @@ import Ticket from "../models/Ticket.js";
 export default async function readTicketsByUser(data) {
     try {
         await connectDB();
-        const { userID } = data;
-        const tickets = await Ticket.find(userID);
+        const { identifier } = data;
+        const tickets = await Ticket.find({ userID: identifier });
         return JSON.stringify(tickets);
     } catch (e) {
         console.log(e)
